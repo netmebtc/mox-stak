@@ -318,7 +318,7 @@ __global__ void cryptonight_core_gpu_phase2( int threads, int bfactor, int parti
 				}
 				else if(ALGO == cryptonight_mox)
 				{
-					const uint32_t index = ((z >> 27) & 12) | ((z >> 23) & 2);
+					const uint32_t index = ((z >> 23) & 2);
 					const uint32_t fork_7 = z ^ ((table >> index) & 0x30U) << 24;
 					storeGlobal32( long_state + j, sub == 2 ? fork_7 : z );
 				}

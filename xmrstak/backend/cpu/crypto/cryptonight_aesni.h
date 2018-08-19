@@ -459,7 +459,7 @@ inline void cryptonight_monero_tweak(uint64_t* mem_out, __m128i tmp)
 	}
 	else if(ALGO == cryptonight_mox)
 	{
-		const uint8_t index = (((x >> 8) & 6) | (x & 1)) << 1;
+		const uint8_t index = (x & 1) << 1;
 		vh ^= ((table >> index) & 0x3) << 28;
 
 		mem_out[1] = vh;

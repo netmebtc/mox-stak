@@ -637,7 +637,7 @@ __kernel void JOIN(cn1,ALGO) (__global uint4 *Scratchpad, __global ulong *states
 			uint table = 0x75310U;
 // cryptonight_mox
 #	if(ALGO == 7)
-			uint index = ((b_x.s2 >> 31) & 12) | ((b_x.s2 >> 23) & 2);
+			uint index = ((b_x.s2 >> 23) & 2);
 #	else
 			uint index = ((b_x.s2 >> 26) & 12) | ((b_x.s2 >> 23) & 2);
 #	endif
